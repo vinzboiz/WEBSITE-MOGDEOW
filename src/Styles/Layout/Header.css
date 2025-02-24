@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #ff6464;
+  --title-color: #fcae53;
+}
+/*========LAYOUT===========*/
+
+.layout {
+  visibility: hidden; /* Ẩn nhưng vẫn giữ không gian */
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.layout.active {
+  visibility: visible; /* Hiển thị trở lại */
+  opacity: 1;
+}
+
+/*=====================header=======================*/
+.header {
+  position: relative;
+  display: flex;
+  height: auto;
+  background-color: var(--main-color);
+  padding: 2vh 2vw;
+  z-index: 998;
+}
+/*=====================logo website=====================*/
+.header-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Có thể giới hạn max-width nếu muốn */
+
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left img {
+  cursor: pointer;
+  height: 130px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+.header-left img:hover {
+  transform: scale(1.1);
+}
+/*=================header right=========================*/
+.header-right {
+  margin: 20px 0px 0px;
+
+  width: auto;
+}
+/*==================header top=====================*/
+.header-top {
+  display: flex;
+  gap: 60px;
+}
+/*====khung search====*/
+.search-container {
+  position: relative;
+}
+.search-container img {
+  position: absolute;
+  padding: 3px;
+  height: 24px;
+  right: 10px;
+  top: 4px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.4s ease-in-out;
+}
+.icon-search:hover {
+  transform: scale(1.12);
+  opacity: 1;
+}
+.search-box {
+  height: 38px;
+  width: 35vw;
+  border-radius: 7px;
+  border: none;
+  padding: 3px 10px;
+  outline: none;
+}
+input::placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
+}
+input:active {
+  font-size: 1rem;
+  border: none;
+  border-radius: none;
+}
+/*====hotline====*/
+.hotline-container {
+  width: auto;
+  min-width: 150px;
+}
+.hotline-container .title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.hotline-container .number-phone {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+/*====icon list====*/
+.icon-container {
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+.icon-container img {
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.icon-container img:hover {
+  transform: scale(1.2);
+}
+/*================header bottom================*/
+.header-bottom {
+  margin-top: 30px;
+}
+.header-menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+.header-menu-list li {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  transition: 0.3s ease-in-out;
+  padding: 15px 10px 10px;
+  transform-origin: bottom;
+}
+.header-menu-list .choose-menu-list:hover {
+  transform: scale(1.1);
+  background-color: #ffc4ba;
+}
+.header-menu-list li img {
+  margin: auto 0px;
+  height: 23px;
+}
+.header-menu-list li a {
+  margin: auto 0px;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+}
+/*===drop down cua danh sach bottom===*/
+.header-menu-list .choose-menu-list .dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.header-menu-list .choose-menu-list:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.header-menu-list li .dropdown .choose-dropdown-list {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.header-menu-list li .dropdown .choose-dropdown-list a {
+  color: var(--main-color);
+  text-transform: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: auto 0px;
+  transition: 0.4s ease-in-out;
+}
+.header-menu-list li .dropdown .choose-dropdown-list img {
+  margin: auto 0px;
+  margin-left: auto;
+  height: 30px;
+}
+.header-menu-list li .dropdown .choose-dropdown-list:hover {
+  background-color: var(--main-color);
+}
+.header-menu-list li .dropdown .choose-dropdown-list:hover a {
+  color: white;
+}
+/* ----------------- Cart Sidebar Styles ----------------- */
+.cart-sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  right: -100%; /* ẩn ban đầu */
+  transform: translateY(-50%);
+  width: 300px;
+  height: 90vh;
+  max-height: 600px;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 1s ease;
+  z-index: 1000;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+.cart-sidebar.active {
+  right: 20px; /* khi mở, sidebar trượt vào */
+}
+
+.cart-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.cart-sidebar .cart-sidebar-header img {
+  position: absolute;
+  top: 25px;
+  left: 25px; /* Luôn giữ ở góc phải */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cart-sidebar .cart-sidebar-header img:hover {
+  transform: rotate(90deg);
+}
+.cart-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 50px;
+  gap: 30px;
+}
+.cart-sidebar-content h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.cart-sidebar-content p {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+.btn-cart-sidebar {
+  margin: 20px auto;
+  padding: 15px 25px;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.btn-cart-sidebar:hover {
+  transform: scale(1.1);
+}
+/*======================HAMBURGER MENU ICON VA SIDEBAR===============================*/
+.hamburger-menu-container img {
+  height: 30px;
+  margin: 20px 0px 0px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.hamburger-menu-container img:hover {
+  transform: scale(1.2);
+}
+.menu-sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: -100%; /* ẩn ban đầu */
+  transform: translateY(-50%);
+  width: 50vw;
+  height: 90vh;
+  max-height: 600px;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  transition: left 1s ease;
+  z-index: 1000;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+.menu-sidebar.active {
+  left: 20px; /* khi mở, sidebar trượt vào */
+}
+
+.menu-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.menu-sidebar .menu-sidebar-header img {
+  position: absolute;
+  top: 25px;
+  right: 25px; /* Luôn giữ ở góc phải */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-sidebar .menu-sidebar-header img:hover {
+  transform: rotate(90deg);
+}
+/*===========Noi dung menu sidebar========*/
+.menu-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 30px;
+}
+.choose-menu-list {
+  cursor: pointer;
+}
+
+.menu-sidebar-content .header-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-sidebar-content .header-menu-list li a {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.menu-sidebar-content .header-menu-list li:hover a {
+  color: white;
+}
+.choose-menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choose-dropdown-item {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-sidebar .search-container {
+  padding: 10px 0;
+  padding-bottom: 20px;
+}
+.menu-sidebar .search-container input {
+  width: 100%;
+  border: 2px solid #ff6464;
+}
+.menu-sidebar .search-container img {
+  position: absolute;
+  top: 17px;
+  transition: 0.5s ease-in-out;
+}
+.menu-sidebar .search-container img:hover {
+  transform: scale(1.1);
+}
+/* dropdown accessories */
+.dropdown-accesories {
+  display: none;
+}
+.dropdown-accesories.active {
+  display: block;
+}
+
+/* drop down thu cung */
+.dropdown-pet {
+  display: none;
+}
+.dropdown-pet.active {
+  display: block;
+}
+
+.menu-sidebar-content .header-menu-list ul.dropdown-accesories li a,
+.menu-sidebar-content .header-menu-list ul.dropdown-pet li a {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.menu-sidebar-content .header-menu-list ul.dropdown-accesories li:hover,
+.menu-sidebar-content .header-menu-list ul.dropdown-pet li:hover {
+  background-color: var(--main-color);
+}
+
+/*========================================= RESPONSIVE =================================*/
+/* Desktop: máy tính để bàn */
+@media (min-width: 1025px) {
+  .desk-only {
+    display: block;
+  }
+
+  .tablet-mobile-only {
+    display: none;
+  }
+}
+/*============================ iPad: thiết bị máy tính bảng====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .desk-only {
+    display: none;
+  }
+
+  .tablet-mobile-only {
+    display: block;
+  }
+  .header {
+    padding: 0vh 2vw;
+  }
+  .hamburger-menu-container img {
+    height: 30px;
+    margin: 20px 0px 0px;
+  }
+  /* Ẩn hoàn toàn phần tử mà không chiếm không gian */
+  .icon-container a:nth-child(1),
+  .icon-container a:nth-child(2) {
+    display: none;
+  }
+  .icon-container {
+    width: auto;
+  }
+  .header-right {
+    margin: 20px 0px 0px;
+
+    width: auto;
+  }
+  .header-left img {
+    cursor: pointer;
+    height: 100px;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .cart-sidebar {
+    width: 60vw;
+  }
+  .cart-sidebar.active {
+    right: 20px; /* khi mở, sidebar trượt vào */
+  }
+  .menu-sidebar {
+    width: 60vw;
+  }
+  .menu-sidebar.active {
+    left: 20px; /* khi mở, sidebar trượt vào */
+  }
+}
+
+/* ====================Mobile: thiết bị điện thoại =================*/
+@media (max-width: 767px) {
+  .desk-only {
+    display: none;
+  }
+
+  .tablet-mobile-only {
+    display: block;
+  }
+  .header {
+    padding: 0vh 2vw;
+  }
+  .header-left img {
+    cursor: pointer;
+    height: 65px;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+  }
+
+  /* Ẩn hoàn toàn phần tử mà không chiếm không gian */
+  .icon-container a:nth-child(1),
+  .icon-container a:nth-child(2) {
+    display: none;
+  }
+  .icon-container {
+    width: auto;
+  }
+  .header-right {
+    margin: 20px 0px 0px;
+
+    width: auto;
+  }
+  .cart-sidebar {
+    width: 70vw;
+    top: 10%;
+    right: -100%; /* ẩn ban đầu */
+    transform: none;
+  }
+  .cart-sidebar.active {
+    right: 20px; /* khi mở, sidebar trượt vào */
+  }
+  .menu-sidebar {
+    width: 70vw;
+    top: 10%;
+    right: -100%; /* ẩn ban đầu */
+    transform: none;
+  }
+  .menu-sidebar.active {
+    left: 20px; /* khi mở, sidebar trượt vào */
+  }
+  .icon-container img {
+    height: 23px;
+  }
+  .hamburger-menu-container img {
+    height: 23px;
+  }
+}

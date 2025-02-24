@@ -1,0 +1,606 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #ff6464;
+  --title-color: #fcae53;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/*=================================== COMMON ===========================================*/
+/*========= TIEU DE =======*/
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.title-container hr {
+  flex: 1; /* Chiếm toàn bộ không gian còn lại */
+  border: none;
+  height: 2px;
+  background-color: #737373;
+  opacity: 0.5;
+  margin: 0 1vw;
+}
+.title-container .title-container-group {
+  display: flex;
+  align-items: center;
+}
+.title-container .title-container-group img {
+  height: 50px;
+  padding: 5px;
+}
+.title-container .title-container-group p {
+  margin: 0;
+  color: var(--title-color);
+  font-size: 1.6rem;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  margin-left: 2px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+/*========= BUTTON ==========*/
+.btn {
+  height: auto;
+  width: auto;
+  padding: 17px 40px;
+  background-color: var(--main-color);
+  color: inherit;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  border-radius: 20px;
+  border: none;
+  margin: 20px auto;
+  cursor: pointer;
+
+  transition: 0.4s ease-in-out;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+/* Khung chứa các thẻ sản phẩm, sắp xếp 5 cột */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+/*=================================== Container slider============================================== */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 45vw;
+  overflow: hidden;
+}
+.slides .slide {
+  position: absolute;
+  width: 100vw;
+  height: 45vw;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slides .slide.active {
+  opacity: 1;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dots-container {
+  position: absolute;
+  bottom: 5vh;
+  right: 4vw;
+  display: flex;
+  gap: 1.5vw;
+}
+.dot {
+  width: 0.6vw;
+  height: 0.6vw;
+  background-color: #f5f3f47c;
+  border-radius: 50%;
+  transition: all 1s;
+  cursor: pointer;
+  padding: 0.7vh;
+}
+.dot:hover {
+  background-color: white;
+}
+.active-dot {
+  width: 5vw;
+  background-color: white;
+  border-radius: 15px;
+}
+.slider-left,
+.slider-right {
+  position: absolute;
+  top: 0;
+  width: 6vw;
+  height: 45vw;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.slider-left:hover,
+.slider-right:hover {
+  opacity: 1;
+}
+.slider-left {
+  left: 0;
+}
+.slider-right {
+  right: 0;
+}
+/*====================================== FEATURED SECTION ===========================================*/
+.feature-section-container {
+  margin-top: 40px;
+  width: 100%;
+}
+/*========Img o tren================*/
+.feature-section-img {
+  display: flex;
+  gap: 1vw; /* Khoảng cách giữa các ảnh là 1vw */
+}
+
+.feature-section-img img {
+  width: calc(
+    (100% - 2vw) / 3
+  ); /* 2 khoảng cách giữa 3 ảnh, chia đều phần còn lại */
+  height: auto;
+  object-fit: cover;
+}
+
+/*=========== description o duoi =============*/
+
+.feature-section-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.feature-section-desc .desc-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.feature-section-desc .desc-container p {
+  margin: 0;
+  color: #737373;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-left: 2px;
+  padding: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.feature-section-desc .desc-container img {
+  height: 35px;
+  padding: 5px;
+}
+
+/*======================== LUA CHON MUA SAM THEO THU CUNG==================*/
+.shop-by-pet-container {
+  margin-top: 50px;
+}
+
+.img-choose-pet-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.img-choose-pet-container img {
+  width: 48.5%;
+}
+.img-choose-pet-container img:first-child {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.img-choose-pet-container img:first-child:hover {
+  transform: scale(1.05);
+}
+.img-choose-pet-container img:last-child {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.img-choose-pet-container img:last-child:hover {
+  transform: scale(1.05);
+}
+/*=========================== DANH MUC SAN PHAM ==============================*/
+/* Container chính */
+.category-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+/* Thanh cuộn ngang */
+.category-scrollbar {
+  display: flex;
+  gap: 15px;
+  width: 98%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 5vh 0;
+  cursor: grab;
+  margin: 20px auto;
+}
+
+.category-scrollbar.dragging {
+  cursor: grabbing;
+}
+
+/* Ẩn thanh cuộn mặc định */
+.category-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-scrollbar::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.category-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.category-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Các mục (item) */
+.category-item {
+  flex: 0 0 250px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Thông tin nằm trên ảnh */
+.category-info {
+  position: absolute;
+  bottom: 2vh;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.category-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*======================================= SHOP CHO CUNG ============================ */
+.dog-shop-container {
+  margin-top: 20px;
+}
+.product-list-dog {
+  position: relative;
+  background-color: var(--main-color);
+  margin: 0 20px 20px;
+  border-radius: 15px;
+  padding: 10px 5px 3px;
+  text-align: center;
+}
+.dog-say-hi {
+  position: absolute;
+  top: -145px;
+  left: 10vw;
+}
+.title-container {
+  margin-bottom: 20px;
+}
+.dog-shop-container .title-container .title-container-group p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.product-list-dog .btn {
+  display: block;
+  width: 190px;
+  background-color: white;
+  color: var(--main-color);
+  margin: 15px auto 20px;
+}
+/*======================================= SHOP MEO CUNG ============================ */
+.cat-shop-container {
+  margin-top: 90px;
+}
+.product-list-cat {
+  position: relative;
+  background-color: var(--main-color);
+  margin: 0 20px;
+  border-radius: 15px;
+  padding: 10px 5px 3px;
+  text-align: center;
+}
+.cat-say-hi {
+  position: absolute;
+  top: -145px;
+  right: 10vw;
+}
+.title-container {
+  margin-bottom: 20px;
+}
+.cat-shop-container .title-container .title-container-group p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.product-list-cat .btn {
+  display: block;
+  width: 190px;
+  background-color: white;
+  color: var(--main-color);
+  margin: 15px auto 20px;
+}
+/*================== DANH CHO PET YEU ==================*/
+.product-list {
+  position: relative;
+  background-color: white;
+  margin: 0 20px 20px;
+  border-radius: 15px;
+  padding: 10px 5px 3px;
+  text-align: center;
+}
+.product-list .btn {
+  display: block;
+  width: 190px;
+  background-color: var(--main-color);
+  color: white;
+  margin: 15px auto 20px;
+}
+/*==================== THUONG HIEU ======================*/
+.brand-container .title-container .title-container-group img {
+  height: 40px;
+}
+.brand-list {
+  margin: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.brand-list img {
+  width: 20vw;
+}
+/* =================== MO TA SHOP VA VIDEO =====================*/
+.desc-shop-container {
+  background-color: white;
+  padding: 10px 12vw 10px;
+}
+.desc-shop-container .title-container .title-container-group p {
+  margin-bottom: 20px;
+}
+.desc-shop-container .desc-shop-desc {
+  font-size: 3vh;
+  font-weight: 500;
+  text-align: center;
+  word-spacing: 2px;
+}
+.youtube-container {
+  text-align: center;
+  margin: 0;
+}
+
+.youtube-container {
+  background-color: white;
+}
+/* Video luôn giữ tỷ lệ 16:9 */
+.video-wrapper {
+  position: relative;
+  width: 100%; /* Độ rộng tối đa */
+  margin: 0 auto;
+  padding-top: 56.25%; /* Tỷ lệ 16:9 (9 / 16 = 0.5625) */
+  background-color: white;
+}
+
+/* Iframe được giữ tỷ lệ */
+.video-wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%); /* Căn giữa */
+}
+
+/*========================================= RESPONSIVE =================================*/
+/* Desktop: máy tính để bàn */
+@media (min-width: 1025px) {
+}
+/*============================ iPad: thiết bị máy tính bảng====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*=====CAN CHINH SLIDE======*/
+  .dots-container {
+    bottom: 3vw;
+    right: 43%;
+  }
+  .dot {
+    padding: 0.5vh;
+  }
+
+  .active-dot {
+    width: 8vw;
+  }
+  .slider-left,
+  .slider-right {
+    width: 10vw;
+  }
+  /*========= FEATURED SECTION ==============*/
+  .feature-section-container {
+    margin-top: 40px;
+    width: 100%;
+  }
+  /*========Img o tren================*/
+  .feature-section-img {
+    display: flex;
+    gap: 1vw; /* Khoảng cách giữa các ảnh là 1vw */
+  }
+
+  .feature-section-img img {
+    width: calc(
+      (100% - 2vw) / 3
+    ); /* 2 khoảng cách giữa 3 ảnh, chia đều phần còn lại */
+    height: auto;
+    object-fit: cover;
+  }
+
+  /*=========== description o duoi =============*/
+
+  .feature-section-desc .desc-container p {
+    font-size: 1rem;
+  }
+
+  .feature-section-desc .desc-container img {
+    height: 28px;
+  }
+  /*=========== LUA CHON MUA SAM THEO THU CUNG =============*/
+  .shop-by-pet-container {
+    margin-top: 0px;
+  }
+}
+
+/* ====================Mobile: thiết bị điện thoại =================*/
+@media (max-width: 767px) {
+  /*========= TIEU DE =======*/
+  .title-container {
+    margin-top: 20px;
+  }
+
+  .title-container .title-container-group img {
+    height: 30px;
+  }
+  .title-container .title-container-group p {
+    font-size: 1rem;
+  }
+  /*=====CAN CHINH SLIDE======*/
+  .dots-container {
+    bottom: 3vw;
+    right: 43%;
+  }
+  .dot {
+    padding: 0.5vh;
+  }
+
+  .active-dot {
+    width: 8vw;
+  }
+  .slider-left,
+  .slider-right {
+    width: 10vw;
+  }
+
+  /*========= FEATURED SECTION ==============*/
+  .feature-section-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+  /*========Img o tren================*/
+  .feature-section-img {
+    display: flex;
+    gap: 1vw; /* Khoảng cách giữa các ảnh là 1vw */
+  }
+
+  .feature-section-img img {
+    width: calc(
+      (100% - 2vw) / 3
+    ); /* 2 khoảng cách giữa 3 ảnh, chia đều phần còn lại */
+    height: auto;
+    object-fit: cover;
+  }
+
+  /*=========== description o duoi =============*/
+
+  .feature-section-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 13px;
+    gap: 10px;
+  }
+
+  .feature-section-desc .desc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .feature-section-desc .desc-container p {
+    margin: 0;
+    color: #737373;
+    font-size: 0.5rem;
+    font-weight: 700;
+    margin-left: 2px;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .feature-section-desc .desc-container img {
+    height: 30px;
+    padding: 5px;
+  }
+  /*=========== LUA CHON MUA SAM THEO THU CUNG =============*/
+  .shop-by-pet-container {
+    margin-top: 20px;
+  }
+
+  .img-choose-pet-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .img-choose-pet-container img {
+    width: 48.5%;
+  }
+  .img-choose-pet-container img:first-child {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .img-choose-pet-container img:first-child:hover {
+    transform: scale(1.05);
+  }
+  .img-choose-pet-container img:last-child {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .img-choose-pet-container img:last-child:hover {
+    transform: scale(1.05);
+  }
+}

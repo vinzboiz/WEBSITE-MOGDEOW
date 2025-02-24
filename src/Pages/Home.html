@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+
+    <link rel="stylesheet" href="../Styles/Reset.css" />
+    <link rel="stylesheet" href="../Styles/Pages/Home/Home.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Common/Product.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--======================= HEADER TAI SU DUNG============================= -->
+      <div id="header"></div>
+
+      <!--======================= SLIDE ==============================-->
+      <div class="slider-container">
+        <!-- Nút chuyển slide bên trái -->
+        <div class="slider-left"></div>
+        <!-- Nút chuyển slide bên phải -->
+        <div class="slider-right"></div>
+
+        <!-- Container chứa các slide -->
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide active">
+            <img
+              src="../Assets/Img/Home/Slide/slide1.png"
+              alt="Slide 1"
+              class="slide-image"
+            />
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img
+              src="../Assets/Img/Home/Slide/slide2.png"
+              alt="Slide 2"
+              class="slide-image"
+            />
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img
+              src="../Assets/Img/Home/Slide/slide3.png"
+              alt="Slide 3"
+              class="slide-image"
+            />
+          </div>
+          <!-- Slide 4 -->
+          <div class="slide">
+            <img
+              src="../Assets/Img/Home/Slide/slide4.png"
+              alt="Slide 4"
+              class="slide-image"
+            />
+          </div>
+        </div>
+        <!-- Thanh chấm (dots) -->
+        <div class="dots-container">
+          <span class="dot active-dot" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+
+      <!--======================= DIEM NOI BAT CU WEBSITE===============-->
+      <div class="feature-section-container">
+        <!--anh o tren-->
+        <div class="feature-section-img">
+          <img src="../Assets/Img/Home/Banner/feature-1.png" alt="anh-1" />
+          <img src="../Assets/Img/Home/Banner/feature-2.png" alt="anh-2" />
+          <img src="../Assets/Img/Home/Banner/feature-3.png" alt="anh-3" />
+        </div>
+        <!--Mo ta o duoi-->
+        <div class="feature-section-desc">
+          <div class="desc-container">
+            <img
+              src="../Assets/Icon/Pages/Home/map-marker-icon.png"
+              alt="icon-"
+            />
+            <p>Giao hàng toàn quốc</p>
+          </div>
+
+          <div class="desc-container">
+            <img src="../Assets/Icon/Pages/Home/gift-icon.png" alt="icon-" />
+            <p>giảm giá & khuyến mãi</p>
+          </div>
+
+          <div class="desc-container">
+            <img src="../Assets/Icon/Pages/Home/human-icon.png" alt="icon-" />
+            <p>bảo hành & tư vấn</p>
+          </div>
+        </div>
+      </div>
+
+      <!--======================= LUA CHON MUA SAM THEO THU CUNG ======================-->
+      <div class="shop-by-pet-container">
+        <div class="title-container">
+          <hr />
+          <div class="title-container-group">
+            <img
+              src="../Assets/Icon/Pages/Home/pet-foot-icon.png"
+              alt="pet-foot-icon"
+            />
+            <p>MUA SẮM THEO THÚ CƯNG</p>
+          </div>
+
+          <hr />
+        </div>
+        <div class="img-choose-pet-container">
+          <img
+            src="../Assets/Img/Home/Banner/banner-choose-dog.png"
+            alt="banner-choose-dog"
+          />
+          <img
+            src="../Assets/Img/Home/Banner/banner-choose-cat.png"
+            alt="banner-choose-cat"
+          />
+        </div>
+      </div>
+
+      <!-- ==================== DANH MUC SAN PHAM ===================-->
+      <div class="category-container">
+        <div class="title-container">
+          <hr />
+          <div class="title-container-group">
+            <img
+              src="../Assets/Icon/Pages/Home/pet-foot-icon.png"
+              alt="pet-foot-icon"
+            />
+            <p>Danh mục sản phẩm</p>
+          </div>
+          <hr />
+        </div>
+        <div class="category-scrollbar">
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/cat-category.png"
+              alt="Item 1"
+            />
+            <div class="category-info">
+              <p class="category-name">Mèo cảnh</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/dog-category.png"
+              alt="Item 2"
+            />
+            <div class="category-info">
+              <p class="category-name">chó cảnh</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/clothes-category.png"
+              alt="Item 3"
+            />
+            <div class="category-info">
+              <p class="category-name">Trang phục thú cưng</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/cushion-category.png"
+              alt="Item 4"
+            />
+            <div class="category-info">
+              <p class="category-name">Đệm thú cưng</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/cage-category.png"
+              alt="Item 5"
+            />
+            <div class="category-info">
+              <p class="category-name">Lồng thú cưng</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/food-category.png"
+              alt="Item 6"
+            />
+            <div class="category-info">
+              <p class="category-name">Thức ăn thú cưng</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/hygiene-category.png"
+              alt="Item 77"
+            />
+            <div class="category-info">
+              <p class="category-name">Dụng cụ vệ sinh</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/toy-category.png"
+              alt="Item 88"
+            />
+            <div class="category-info">
+              <p class="category-name">Đồ chơi thú cưng</p>
+            </div>
+          </div>
+          <div class="category-item">
+            <img
+              src="../Assets/Img/Home/Category/medicine-category.png"
+              alt="Item 9"
+            />
+            <div class="category-info">
+              <p class="category-name">Thuốc & thực phẩm chức năng</p>
+            </div>
+          </div>
+        </div>
+        <a class="btn" href="#">XEM THÊM</a>
+      </div>
+
+      <!-- ==================== SHOP CHO CUNG =========================-->
+      <div class="dog-shop-container">
+        <div class="title-container">
+          <div class="title-container-group">
+            <p>SHOP CHÓ CƯNG</p>
+          </div>
+        </div>
+        <div class="product-list-dog">
+          <img
+            src="../Assets/Img/Home/Order/dog-say-hi.png"
+            alt="dog-say-hi"
+            class="dog-say-hi"
+          />
+          <div id="dogContainer" class="product-container"></div>
+          <a class="btn" href="#">XEM THÊM</a>
+        </div>
+      </div>
+      <!-- ==================== SHOP MEO CUNG =========================-->
+      <div class="cat-shop-container">
+        <div class="title-container">
+          <div class="title-container-group">
+            <p>SHOP MÈO CƯNG</p>
+          </div>
+        </div>
+        <div class="product-list-cat">
+          <img
+            src="../Assets/Img/Home/Order/cat-say-hi.png"
+            alt="cat-say-hi"
+            class="cat-say-hi"
+          />
+          <div id="catContainer" class="product-container"></div>
+          <a class="btn" href="#">XEM THÊM</a>
+        </div>
+      </div>
+      <!-- ===================== DANH CHO PET YEU ==========================-->
+      <div class="product-shop-container">
+        <div class="title-container">
+          <hr />
+          <div class="title-container-group">
+            <img
+              src="../Assets/Icon/Pages/Home/pet-foot-icon.png"
+              alt="pet-foot-icon"
+            />
+            <p>Dành cho pet yêu</p>
+          </div>
+          <hr />
+        </div>
+
+        <div class="product-list">
+          <div id="foodContainer" class="product-container"></div>
+          <a class="btn" href="#">XEM THÊM</a>
+        </div>
+      </div>
+      <!-- =======================THUONG HIEU ==============================-->
+      <div class="brand-container">
+        <div class="title-container">
+          <hr />
+          <div class="title-container-group">
+            <img
+              src="../Assets/Icon/Pages/Home/push-pin-icon.png"
+              alt="pet-foot-icon"
+            />
+            <p>THƯƠNG HIỆU</p>
+          </div>
+          <hr />
+        </div>
+
+        <div class="brand-list">
+          <img src="../Assets/Logo/Order/lazada-logo.png" alt="lazada-logo" />
+          <img src="../Assets/Logo/Order/shoppe-logo.png" alt="shoppe-logo" />
+          <img
+            src="../Assets/Logo/Order/tiktok-shop-logo.png"
+            alt="tiktok-shop-logo"
+          />
+          <img src="../Assets/Logo/Order/titki-logo.png" alt="tiki-logo" />
+        </div>
+      </div>
+      <!--======================== MO TA  ======================-->
+      <div class="desc-shop-container">
+        <div class="title-container">
+          <div class="title-container-group">
+            <p>Mogdeow pet shop - yêu thú cưng cùng bạn</p>
+          </div>
+        </div>
+        <div class="desc-shop-desc">
+          Tại MogDeow Pet Shop, chúng tôi chia sẻ niềm đam mê chăm sóc và yêu
+          thương thú cưng của bạn! Chúng tôi cung cấp sản phẩm chất lượng cao,
+          từ thức ăn dinh dưỡng, đồ chơi độc đáo, phụ kiện thời trang đến dụng
+          cụ chăm sóc sức khỏe. Mỗi sản phẩm đều được lựa chọn kỹ lưỡng từ
+          thương hiệu uy tín và kiểm định nghiêm ngặt, mang lại sự an tâm cho
+          thú cưng và cả gia đình.
+          <br />
+          <br />
+          Không chỉ cung cấp sản phẩm, MogDeow Pet Shop còn mang đến dịch vụ tư
+          vấn chuyên nghiệp và hỗ trợ tận tâm. Với phương châm “Chăm sóc tận
+          tâm, yêu thương trọn vẹn”, chúng tôi luôn lắng nghe và đáp ứng mọi nhu
+          cầu của bạn. Hãy đến với chúng tôi để cảm nhận sự khác biệt và niềm
+          vui trong việc chăm sóc thú cưng theo cách riêng của bạn!
+        </div>
+      </div>
+      <!--==========================VIDEO WEB========================-->
+
+      <div class="youtube-container">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/u2FLSmVsFs0"
+            title="YouTube Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+
+    <!--===================================== Import Script ========================================-->
+
+    <script src="../JavaScripts/Common/AddLayout.js"></script>
+    <!--Load header-->
+    <script src="../JavaScripts/Common/LoadHeader.js"></script>
+    <!--Script de chuyen slide anh-->
+    <script src="../JavaScripts/Common/Slide.js"></script>
+
+    <!--Script de chuyen slide scroll category-->
+    <script src="../JavaScripts/Home/CategorySlide.js"></script>
+
+    <!-- DATA DANH SACH THU CUNG -->
+    <script src="../Data/PetData/PetData.js"></script>
+
+    <!-- DATA DANH SACH SAN PHAM -->
+    <script src="../Data/ProductData/ProductData.js"></script>
+    <!-- SCRIPT DOC TU DATA -->
+    <script src="../JavaScripts/Home/ProductReaderData.js"></script>
+    <!-- Script hien thi danh sach tu datadata-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        displayRandomProducts("dog", "dogContainer", 5);
+        displayRandomProducts("cat", "catContainer", 5);
+        displayRandomProducts("food", "foodContainer", 10);
+      });
+    </script>
+  </body>
+</html>
