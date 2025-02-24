@@ -492,6 +492,89 @@ body {
   .shop-by-pet-container {
     margin-top: 0px;
   }
+  /*=========================== DANH MUC SAN PHAM ==============================*/
+  /* Container chính */
+  .category-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  /* Thanh cuộn ngang */
+  .category-scrollbar {
+    display: flex;
+    gap: 15px;
+    width: 98%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5vh 0;
+    cursor: grab;
+    margin: 20px auto;
+  }
+
+  .category-scrollbar.dragging {
+    cursor: grabbing;
+  }
+
+  /* Ẩn thanh cuộn mặc định */
+  .category-scrollbar::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .category-scrollbar::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 3px;
+  }
+
+  .category-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  .category-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+
+  /* Các mục (item) */
+  .category-item {
+    flex: 0 0 250px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .category-item:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Thông tin nằm trên ảnh */
+  .category-info {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  .category-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 }
 
 /* ====================Mobile: thiết bị điện thoại =================*/
