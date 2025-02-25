@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../Styles/Reset.css" />
     <link rel="stylesheet" href="../Styles/Pages/Home/Home.css" />
     <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Common/ProductScroll.css" />
     <link rel="stylesheet" href="../Styles/Common/Product.css" />
     <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
   </head>
@@ -239,7 +240,7 @@
             alt="dog-say-hi"
             class="dog-say-hi"
           />
-          <div id="dogContainer" class="product-container"></div>
+          <div id="dogContainer" class="product-container-scroll"></div>
           <a class="btn" href="#">XEM THÊM</a>
         </div>
       </div>
@@ -256,7 +257,7 @@
             alt="cat-say-hi"
             class="cat-say-hi"
           />
-          <div id="catContainer" class="product-container"></div>
+          <div id="catContainer" class="product-container-scroll"></div>
           <a class="btn" href="#">XEM THÊM</a>
         </div>
       </div>
@@ -343,10 +344,15 @@
     </div>
 
     <!--===================================== Import Script ========================================-->
-
+    <!--Script trung gian de add layout-->
     <script src="../JavaScripts/Common/AddLayout.js"></script>
+
     <!--Load header-->
     <script src="../JavaScripts/Common/LoadHeader.js"></script>
+
+    <!--Load footer-->
+    <script src="../JavaScripts/Common/LoadFooter.js"></script>
+
     <!--Script de chuyen slide anh-->
     <script src="../JavaScripts/Common/Slide.js"></script>
 
@@ -358,14 +364,41 @@
 
     <!-- DATA DANH SACH SAN PHAM -->
     <script src="../Data/ProductData/ProductData.js"></script>
+
     <!-- SCRIPT DOC TU DATA -->
     <script src="../JavaScripts/Home/ProductReaderData.js"></script>
+
     <!-- Script hien thi danh sach tu datadata-->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        displayRandomProducts("dog", "dogContainer", 5);
-        displayRandomProducts("cat", "catContainer", 5);
-        displayRandomProducts("food", "foodContainer", 10);
+        function getFoodProductCount() {
+          if (window.innerWidth >= 1024) {
+            return 10; // Desktop
+          } else if (window.innerWidth >= 768) {
+            return 9; // iPad
+          } else {
+            return 8; // Mobile
+          }
+        }
+
+        function displayProducts() {
+          displayRandomProducts("dog", "dogContainer", 5, "scroll");
+          displayRandomProducts("cat", "catContainer", 5, "scroll");
+          displayRandomProducts(
+            "food",
+            "foodContainer",
+            getFoodProductCount(),
+            "normal"
+          );
+        }
+
+        // Load products on page load
+        displayProducts();
+
+        // Listen for window resize and update product count dynamically
+        window.addEventListener("resize", function () {
+          displayProducts();
+        });
       });
     </script>
   </body>
