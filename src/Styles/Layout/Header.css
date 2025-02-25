@@ -95,19 +95,19 @@
 .search-container img {
   position: absolute;
   padding: 3px;
-  height: 24px;
+  height: 26px;
   right: 10px;
-  top: 4px;
+  top: 5px;
   cursor: pointer;
   opacity: 0.8;
   -webkit-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
-.icon-search:hover {
-  -webkit-transform: scale(1.12);
-  -ms-transform: scale(1.12);
-  transform: scale(1.12);
+.search-container img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
   opacity: 1;
 }
 .search-box {
