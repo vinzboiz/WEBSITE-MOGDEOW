@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .footer {
   background-color: #ff6464;
   color: white;
@@ -6,8 +13,13 @@
 }
 
 .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
@@ -15,6 +27,8 @@
 }
 
 .footer-section {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   padding: 20px;
   min-width: 280px;
@@ -59,6 +73,8 @@
 }
 
 .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   list-style: none;

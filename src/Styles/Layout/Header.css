@@ -1,4 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 :root {
@@ -17,6 +25,8 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 999;
+  -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
@@ -28,6 +38,8 @@
 /*=====================header=======================*/
 .header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: auto;
   background-color: var(--main-color);
@@ -36,21 +48,31 @@
 }
 /*=====================logo website=====================*/
 .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 1200px; /* Có thể giới hạn max-width nếu muốn */
 
   margin: 0 auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .header-left img {
   cursor: pointer;
   height: 130px;
   padding: 10px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 .header-left img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 /*=================header right=========================*/
@@ -61,6 +83,8 @@
 }
 /*==================header top=====================*/
 .header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 60px;
 }
@@ -76,9 +100,13 @@
   top: 4px;
   cursor: pointer;
   opacity: 0.8;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 .icon-search:hover {
+  -webkit-transform: scale(1.12);
+  -ms-transform: scale(1.12);
   transform: scale(1.12);
   opacity: 1;
 }
@@ -89,6 +117,26 @@
   border: none;
   padding: 3px 10px;
   outline: none;
+}
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
+}
+input::-moz-placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
+}
+input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
+}
+input::-ms-input-placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
 }
 input::placeholder {
   font-size: 1rem;
@@ -121,16 +169,24 @@ input:active {
 /*====icon list====*/
 .icon-container {
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
   gap: 30px;
 }
 .icon-container img {
   height: 30px;
   cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 .icon-container img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 /*================header bottom================*/
@@ -138,18 +194,30 @@ input:active {
   margin-top: 30px;
 }
 .header-menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .header-menu-list li {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   padding: 15px 10px 10px;
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
   transform-origin: bottom;
 }
 .header-menu-list .choose-menu-list:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   background-color: #ffc4ba;
 }
@@ -179,15 +247,23 @@ input:active {
   min-width: 200px;
   min-height: 200px;
   border-radius: 0px 0px 10px 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 .header-menu-list .choose-menu-list:hover .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .header-menu-list li .dropdown .choose-dropdown-list {
   cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 .header-menu-list li .dropdown .choose-dropdown-list a {
@@ -196,6 +272,8 @@ input:active {
   font-size: 0.85rem;
   font-weight: 600;
   margin: auto 0px;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 .header-menu-list li .dropdown .choose-dropdown-list img {
@@ -212,17 +290,27 @@ input:active {
 /* ----------------- Cart Sidebar Styles ----------------- */
 .cart-sidebar {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   top: 50%;
   right: -100%; /* ẩn ban đầu */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 300px;
   height: 90vh;
   max-height: 600px;
   background: #fff;
+  -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  -webkit-transition: right 1s ease;
+  -o-transition: right 1s ease;
   transition: right 1s ease;
   z-index: 1000;
   border-radius: 8px;
@@ -233,8 +321,14 @@ input:active {
 }
 
 .cart-sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   padding-bottom: 10px;
@@ -247,28 +341,49 @@ input:active {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .cart-sidebar .cart-sidebar-header img:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .cart-sidebar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
   padding-top: 50px;
   gap: 30px;
 }
 .cart-sidebar-content h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 1.4rem;
   font-weight: 700;
 }
 .cart-sidebar-content p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 1rem;
   line-height: 1.3rem;
@@ -285,10 +400,14 @@ input:active {
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   border-radius: 5px;
 }
 .btn-cart-sidebar:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 /*======================HAMBURGER MENU ICON VA SIDEBAR===============================*/
@@ -296,24 +415,38 @@ input:active {
   height: 30px;
   margin: 20px 0px 0px;
   cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 .hamburger-menu-container img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 .menu-sidebar {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   top: 50%;
   left: -100%; /* ẩn ban đầu */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 50vw;
   height: 90vh;
   max-height: 600px;
   background: #fff;
+  -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   padding: 25px;
+  -webkit-transition: left 1s ease;
+  -o-transition: left 1s ease;
   transition: left 1s ease;
   z-index: 1000;
   border-radius: 8px;
@@ -324,8 +457,14 @@ input:active {
 }
 
 .menu-sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 20px;
 }
@@ -336,16 +475,29 @@ input:active {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .menu-sidebar .menu-sidebar-header img:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 /*===========Noi dung menu sidebar========*/
 .menu-sidebar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   gap: 30px;
@@ -355,7 +507,12 @@ input:active {
 }
 
 .menu-sidebar-content .header-menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 20px;
 }
@@ -363,18 +520,28 @@ input:active {
   color: black;
   font-size: 0.9rem;
   font-weight: 600;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .menu-sidebar-content .header-menu-list li:hover a {
   color: white;
 }
 .choose-menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .choose-dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .menu-sidebar .search-container {
@@ -388,9 +555,13 @@ input:active {
 .menu-sidebar .search-container img {
   position: absolute;
   top: 17px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 .menu-sidebar .search-container img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 /* dropdown accessories */
@@ -463,6 +634,8 @@ input:active {
     cursor: pointer;
     height: 100px;
     padding: 10px;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
 
@@ -496,6 +669,8 @@ input:active {
     cursor: pointer;
     height: 65px;
     padding: 5px;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
 
@@ -516,6 +691,8 @@ input:active {
     width: 70vw;
     top: 10%;
     right: -100%; /* ẩn ban đầu */
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .cart-sidebar.active {
@@ -525,6 +702,8 @@ input:active {
     width: 70vw;
     top: 10%;
     right: -100%; /* ẩn ban đầu */
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
   .menu-sidebar.active {

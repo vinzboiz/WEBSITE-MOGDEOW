@@ -1,4 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,6 +21,8 @@ body {
 
 /* Thiết kế cho thẻ sản phẩm */
 .product-card-scroll {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 250px;
   flex: 0 0 250px; /* Cố định chiều rộng */
   height: 340px; /* Chiều cao cố định */
   border-radius: 8px;
@@ -21,13 +31,21 @@ body {
 
   text-align: center;
 
+  -webkit-transition: 0.5s ease-in-out;
+
+  -o-transition: 0.5s ease-in-out;
+
   transition: 0.5s ease-in-out;
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
   transform-origin: bottom;
 
   color: inherit;
   text-decoration: none;
 }
 .product-card-scroll:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 /* Đóng gói ảnh và button */
@@ -41,6 +59,8 @@ body {
   position: absolute;
   bottom: -50px; /* ẩn bên dưới */
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: var(--main-color);
   color: #fff;
@@ -51,6 +71,8 @@ body {
   cursor: pointer;
   text-decoration: none;
   opacity: 0;
+  -webkit-transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  -o-transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
   transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
@@ -78,6 +100,7 @@ body {
   line-height: 1.1rem;
   height: 2.4rem;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -92,8 +115,11 @@ body {
   margin: 8px auto 0;
   height: 1.2em; /* 1 dòng */
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -108,6 +134,8 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   /* Thiết kế cho thẻ sản phẩm */
   .product-card-scroll {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
     flex: 0 0 200px; /* Cố định chiều rộng */
     height: 290px; /* Chiều cao cố định */
   }
@@ -131,6 +159,8 @@ body {
 @media (max-width: 767px) {
   /* Thiết kế cho thẻ sản phẩm */
   .product-card-scroll {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 150px;
     flex: 0 0 150px; /* Cố định chiều rộng */
     height: 240px; /* Chiều cao cố định */
   }
