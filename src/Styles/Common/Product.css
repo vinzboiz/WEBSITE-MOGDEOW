@@ -154,7 +154,8 @@ body {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 150px;
     flex: 0 0 150px; /* Cố định chiều rộng */
-    height: 270px; /* Chiều cao cố định */
+    height: 210px; /* Chiều cao cố định */
+    border-radius: 8px;
   }
 
   /* Giới hạn hiển thị tên sản phẩm chỉ 2 dòng với ellipsis */

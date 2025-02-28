@@ -1,0 +1,579 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #ff6464;
+  --title-color: #fcae53;
+  --sidebar-bg: #f9f9f9;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+}
+
+/* ======================== LAYOUT ======================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+.container-bottom {
+  display: flex;
+}
+
+/*========================CONTAINER TOP ==========================*/
+.container-top {
+  display: flex;
+  padding: 15px 0px;
+}
+.home-navigation {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  align-content: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.home-navigation:hover {
+  color: var(--main-color);
+}
+.slash-line {
+  font-size: 1.2rem;
+  font-weight: 400;
+  align-content: center;
+  padding: 0 10px;
+  justify-content: center;
+}
+#searchResultText {
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  align-content: center;
+  text-transform: capitalize;
+
+  transition: all 0.5s ease-in-out;
+}
+/*======================================= CONTAINER BOTTOM =========================================*/
+/*======================== RIGHT ======================================*/
+/* ============== SIDEBAR ================== */
+.sidebar {
+  width: 25%;
+  padding: 20px 20px;
+  border-right: 1px solid #ddd;
+  background: var(--sidebar-bg);
+}
+
+.sidebar h2 {
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.sidebar li {
+  padding: 20px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.sidebar li:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+/* ============ FILTER ============== */
+.range-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 18px 15px;
+}
+#priceRangeMin,
+#priceRangeMax {
+  display: block;
+  width: 95%;
+
+  margin: 20px auto 25px;
+  max-width: 300px;
+  height: 6px;
+  -webkit-appearance: none;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+#priceRangeMin:hover,
+#priceRangeMax:hover {
+  background: #aaa;
+}
+
+/* Cấu hình nút trượt */
+#priceRangeMin::-webkit-slider-thumb,
+#priceRangeMax::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#priceRangeMin:active::-webkit-slider-thumb,
+#priceRangeMax:active::-webkit-slider-thumb {
+  background: #ff3300;
+}
+
+#priceValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 10px 5px;
+}
+
+#filterBtn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+#filterBtn:hover {
+  background: #e04e50;
+}
+/*=============================== RIGHT ==================================*/
+/*================= PRODUCT SECTION TOP=================*/
+.product-section-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px;
+}
+
+.title-result {
+  margin: auto 0px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--title-color);
+}
+#sortPrice {
+  width: 30%;
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#sortPrice:hover {
+  background: #f9f9f9;
+}
+/* ======================== PRODUCT SECTION ======================== */
+.product-section {
+  width: 75%;
+  padding: 20px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+.layout-search {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.layout-search.show {
+  display: block;
+}
+
+/* ======================== RESPONSIVE SIDEBAR ======================== */
+/*================================================== DESKTOP ====================================================*/
+@media (min-width: 1025px) {
+  #filterToggleBtn {
+    display: none;
+  }
+  #closeSidebar {
+    display: none;
+  }
+}
+/*================================================== IPAD ================================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-top {
+    display: flex;
+    padding: 15px 0px;
+    justify-content: center;
+  }
+
+  #searchResultText {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    align-content: center;
+    text-transform: capitalize;
+
+    transition: all 0.5s ease-in-out;
+  }
+  #sortPrice {
+    width: 40%;
+  }
+
+  .sidebar {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    top: 50%;
+    left: -100%; /* ẩn ban đầu */
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50vw;
+    height: 90vh;
+    max-height: 800px;
+    background: #fff;
+    -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    -webkit-transition: left 1s ease;
+    -o-transition: left 1s ease;
+    transition: left 1s ease;
+    z-index: 1000;
+    border-radius: 8px;
+    overflow-y: auto;
+  }
+
+  /* Hiển thị sidebar khi có class 'show' */
+  .sidebar.show {
+    left: 20px; /* khi mở, sidebar trượt vào */
+  }
+
+  /* Nút mở sidebar */
+  #filterToggleBtn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  /* Nút đóng sidebar */
+  #closeSidebar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #closeSidebar:hover {
+    background: #cc0000;
+  }
+  /* ======================== PRODUCT SECTION ======================== */
+  .product-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+}
+/* ==================================== MOBILE =====================================*/
+@media (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+  }
+  .container-top {
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+  }
+  .home-navigation {
+    font-size: 0.8rem;
+  }
+  .slash-line {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+  #searchResultText {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    align-content: center;
+    text-transform: capitalize;
+
+    transition: all 0.5s ease-in-out;
+  }
+  #sortPrice {
+    width: 40%;
+  }
+
+  .sidebar {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    top: 53%;
+    left: -100%; /* ẩn ban đầu */
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 75%;
+    height: 90vh;
+    max-height: 550px;
+    background: #fff;
+    -webkit-box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    -webkit-transition: left 1s ease;
+    -o-transition: left 1s ease;
+    transition: left 1s ease;
+    z-index: 1000;
+    border-radius: 8px;
+    overflow-y: auto;
+  }
+
+  /* Hiển thị sidebar khi có class 'show' */
+  .sidebar.show {
+    left: 20px; /* khi mở, sidebar trượt vào */
+  }
+
+  /* Nút mở sidebar */
+  #filterToggleBtn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  /* Nút đóng sidebar */
+  #closeSidebar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #closeSidebar:hover {
+    background: #cc0000;
+  }
+  /* ======================== PRODUCT SECTION ======================== */
+  .product-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+  /*=============================== RIGHT ==================================*/
+  /*================= PRODUCT SECTION TOP=================*/
+  .product-section-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  .title-result {
+    margin: auto 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--title-color);
+  }
+  #sortPrice {
+    width: 35%;
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-size: 0.6rem;
+  }
+
+  #sortPrice:hover {
+    background: #f9f9f9;
+  }
+  /* ======================== PRODUCT SECTION ======================== */
+  .product-section {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0px;
+  }
+  /*======================== RIGHT ======================================*/
+  /* ============== SIDEBAR ================== */
+
+  .sidebar h2 {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--main-color);
+  }
+
+  .sidebar li {
+    padding: 15px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  /* ============ FILTER ============== */
+  .range-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 13px 10px;
+  }
+  #priceRangeMin,
+  #priceRangeMax {
+    display: block;
+    width: 95%;
+
+    margin: 10px auto 15px;
+    max-width: 300px;
+    height: 6px;
+    -webkit-appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  #priceRangeMin:hover,
+  #priceRangeMax:hover {
+    background: #aaa;
+  }
+
+  /* Cấu hình nút trượt */
+  #priceRangeMin::-webkit-slider-thumb,
+  #priceRangeMax::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  #priceRangeMin:active::-webkit-slider-thumb,
+  #priceRangeMax:active::-webkit-slider-thumb {
+    background: #ff3300;
+  }
+
+  #priceValue {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 8px 5px;
+  }
+
+  #filterBtn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+
+  #filterBtn:hover {
+    background: #e04e50;
+  }
+}

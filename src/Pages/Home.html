@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
   </head>
   <body>
+    <!--Button to toptop-->
     <img
       id="backToTopBtn"
       src="../Assets/Icon/Common/to-top-icon.png"
@@ -127,10 +128,13 @@
           <img
             src="../Assets/Img/Home/Banner/banner-choose-dog.png"
             alt="banner-choose-dog"
+            data-category="dog"
           />
+
           <img
             src="../Assets/Img/Home/Banner/banner-choose-cat.png"
             alt="banner-choose-cat"
+            data-category="cat"
           />
         </div>
       </div>
@@ -155,7 +159,7 @@
               alt="Item 1"
             />
             <div class="category-info">
-              <p class="category-name">Mèo cảnh</p>
+              <p class="category-name" data-category="cat">Mèo cảnh</p>
             </div>
           </div>
           <div class="category-item">
@@ -164,7 +168,7 @@
               alt="Item 2"
             />
             <div class="category-info">
-              <p class="category-name">chó cảnh</p>
+              <p class="category-name" data-category="dog">chó cảnh</p>
             </div>
           </div>
           <div class="category-item">
@@ -173,34 +177,32 @@
               alt="Item 3"
             />
             <div class="category-info">
-              <p class="category-name">Trang phục thú cưng</p>
-            </div>
-          </div>
-          <div class="category-item">
-            <img
-              src="../Assets/Img/Home/Category/cushion-category.png"
-              alt="Item 4"
-            />
-            <div class="category-info">
-              <p class="category-name">Đệm thú cưng</p>
+              <p class="category-name" data-category="accessories">
+                Đồ dùng, đồ chơi, phụ kiện
+              </p>
             </div>
           </div>
           <div class="category-item">
             <img
               src="../Assets/Img/Home/Category/cage-category.png"
-              alt="Item 5"
+              alt="Item 4"
             />
             <div class="category-info">
-              <p class="category-name">Lồng thú cưng</p>
+              <p class="category-name" data-category="housing">
+                Chuồng, balo, đệm
+              </p>
             </div>
           </div>
+
           <div class="category-item">
             <img
               src="../Assets/Img/Home/Category/food-category.png"
               alt="Item 6"
             />
             <div class="category-info">
-              <p class="category-name">Thức ăn thú cưng</p>
+              <p class="category-name" data-category="food">
+                Thức ăn và thực phẩm dinh dưỡng
+              </p>
             </div>
           </div>
           <div class="category-item">
@@ -209,25 +211,21 @@
               alt="Item 77"
             />
             <div class="category-info">
-              <p class="category-name">Dụng cụ vệ sinh</p>
+              <p class="category-name" data-category="hygiene">
+                Vệ sinh và chăm sóc
+              </p>
             </div>
           </div>
-          <div class="category-item">
-            <img
-              src="../Assets/Img/Home/Category/toy-category.png"
-              alt="Item 88"
-            />
-            <div class="category-info">
-              <p class="category-name">Đồ chơi thú cưng</p>
-            </div>
-          </div>
+
           <div class="category-item">
             <img
               src="../Assets/Img/Home/Category/medicine-category.png"
               alt="Item 9"
             />
             <div class="category-info">
-              <p class="category-name">Thuốc & thực phẩm chức năng</p>
+              <p class="category-name" data-category="medicine">
+                Thuốc & thực phẩm chức năng
+              </p>
             </div>
           </div>
         </div>
@@ -248,7 +246,7 @@
             class="dog-say-hi"
           />
           <div id="dogContainer" class="product-container-scroll"></div>
-          <a class="btn" href="#">XEM THÊM</a>
+          <a class="btn" href="#" data-category="dog">XEM THÊM</a>
         </div>
       </div>
       <!-- ==================== SHOP MEO CUNG =========================-->
@@ -265,7 +263,7 @@
             class="cat-say-hi"
           />
           <div id="catContainer" class="product-container-scroll"></div>
-          <a class="btn" href="#">XEM THÊM</a>
+          <a class="btn" href="#" data-category="cat">XEM THÊM</a>
         </div>
       </div>
       <!-- ===================== DANH CHO PET YEU ==========================-->
@@ -283,8 +281,8 @@
         </div>
 
         <div class="product-list">
-          <div id="foodContainer" class="product-container"></div>
-          <a class="btn" href="#">XEM THÊM</a>
+          <div id="productContainer" class="product-container"></div>
+          <a class="btn" href="#" data-category="all-accessories">XEM THÊM</a>
         </div>
       </div>
       <!-- =======================THUONG HIEU ==============================-->
@@ -366,9 +364,6 @@
     <!--Script de chuyen slide scroll category-->
     <script src="../JavaScripts/Home/CategorySlide.js"></script>
 
-    <!-- DATA DANH SACH THU CUNG -->
-    <script src="../Data/PetData/PetData.js"></script>
-
     <!-- DATA DANH SACH SAN PHAM -->
     <script src="../Data/ProductData/ProductData.js"></script>
 
@@ -376,38 +371,11 @@
     <script src="../JavaScripts/Home/ProductReaderData.js"></script>
 
     <!-- Script hien thi danh sach tu datadata-->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        function getFoodProductCount() {
-          if (window.innerWidth >= 1024) {
-            return 10; // Desktop
-          } else if (window.innerWidth >= 768) {
-            return 9; // iPad
-          } else {
-            return 8; // Mobile
-          }
-        }
+    <script src="../JavaScripts/Home/DislayProduct.js"></script>
 
-        function displayProducts() {
-          displayRandomProducts("dog", "dogContainer", 7, "scroll");
-          displayRandomProducts("cat", "catContainer", 7, "scroll");
-          displayRandomProducts(
-            "food",
-            "foodContainer",
-            getFoodProductCount(),
-            "normal"
-          );
-        }
-
-        // Load products on page load
-        displayProducts();
-
-        // Listen for window resize and update product count dynamically
-        window.addEventListener("resize", function () {
-          displayProducts();
-        });
-      });
-    </script>
+    <!--SCRIPT DE CUON LEN DAU TRANG-->
     <script src="../JavaScripts/Common/ToTop.js"></script>
+
+    <script src="../JavaScripts/Home/CategoryNavigation.js"></script>
   </body>
 </html>

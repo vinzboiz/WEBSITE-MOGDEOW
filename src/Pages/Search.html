@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kết quả tìm kiếm</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+
+    <link rel="stylesheet" href="../Styles/Pages/Home/Home.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+    <link rel="stylesheet" href="../Styles/Common/Product.css" />
+    <link rel="stylesheet" href="../Styles/Pages/Search/Search.css" />
+  </head>
+  <body>
+    <!--Button to toptop-->
+    <img
+      id="backToTopBtn"
+      src="../Assets/Icon/Common/to-top-icon.png"
+      alt="Lên đầu trang"
+      class="to-top-icon"
+    />
+    <!--Layout khi mo sidebar-->
+    <div class="layout-search" id="layout-sidebar-search"></div>
+    <div id="header"></div>
+    <div class="container">
+      <!-- Nút mở Sidebar trên Mobile -->
+      <button id="filterToggleBtn">Lọc sản phẩm</button>
+      <div class="container-top">
+        <a href="#" class="home-navigation">trang chủ </a>
+        <div class="slash-line">/</div>
+        <p id="searchResultText"></p>
+      </div>
+      <div class="container-bottom">
+        <!-- Sidebar bên trái -->
+        <div class="sidebar">
+          <h2>Danh Mục Sản Phẩm</h2>
+          <ul id="categoryList">
+            <li data-category="all">Tất Cả</li>
+            <li data-category="dog">Chó Cảnh</li>
+            <!-- ✅ Trùng với category: "dog" -->
+            <li data-category="cat">Mèo Cảnh</li>
+            <!-- ✅ Trùng với category: "cat" -->
+            <li data-category="food">Thức ăn & Thực phẩm dinh dưỡng</li>
+            <li data-category="hygiene">Vệ sinh & Chăm sóc</li>
+            <li data-category="accessories">Đồ dùng, Đồ chơi & Phụ kiện</li>
+            <li data-category="housing">Chuồng, Balo & Đệm</li>
+            <li data-category="medicine">Thuốc & Thực phẩm chức năng</li>
+          </ul>
+          <div class="range-container"></div>
+          <!-- Bộ lọc giá -->
+          <p class="range-title">Lọc theo giá</p>
+
+          <input
+            type="range"
+            id="priceRangeMin"
+            min="0"
+            max="20000000"
+            step="10000"
+            value="0"
+          />
+
+          <input
+            type="range"
+            id="priceRangeMax"
+            min="0"
+            max="20000000"
+            step="10000"
+            value="20000000"
+          />
+
+          <p id="priceValue">0 đ - 20.000.000 đ</p>
+
+          <button id="filterBtn">Lọc sản phẩm</button>
+        </div>
+
+        <!-- Phần sản phẩm bên phải -->
+        <div class="product-section">
+          <div class="product-section-top">
+            <div class="title-result">Danh Sách Sản Phẩm</div>
+            <!-- Lọc theo thứ tự giá -->
+            <select id="sortPrice">
+              <option value="none">Sắp xếp giá</option>
+              <option value="asc">Giá tăng dần</option>
+              <option value="desc">Giá giảm dần</option>
+            </select>
+          </div>
+
+          <div id="searchResults" class="product-container"></div>
+          <button id="loadMoreBtn" class="btn">XEM THÊM</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="../JavaScripts/Common/AddLayout.js" defer></script>
+    <script src="../JavaScripts/Common/LoadHeader.js" defer></script>
+    <script src="../JavaScripts/Common/LoadFooter.js" defer></script>
+    <script src="../Data/ProductData/ProductData.js" defer></script>
+    <script src="../JavaScripts/Common/Search.js" defer></script>
+    <script src="../JavaScripts/Search/Search-Sidebar.js" defer></script>
+    <script src="../JavaScripts/Common/ToTop.js"></script>
+    <script src="../JavaScripts/Search/FilterSidebar.js"></script>
+  </body>
+</html>
