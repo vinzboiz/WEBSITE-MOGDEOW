@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link rel="stylesheet" href="../Styles/Reset.css" />
+
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+    <link rel="stylesheet" href="../Styles/Pages/Login-Signin/Login.css" />
+  </head>
+  <body>
+    <!--Button to toptop-->
+    <img
+      id="backToTopBtn"
+      src="../Assets/Icon/Common/to-top-icon.png"
+      alt="Lên đầu trang"
+      class="to-top-icon"
+    />
+    <div class="container">
+      <div id="header"></div>
+      <div class="container-login">
+        <div class="login-container">
+          <h2>Đăng Nhập</h2>
+          <form id="loginForm">
+            <div class="input-group">
+              <label for="username">Tên tài khoản</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Nhập tên tài khoản"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="password">Mật khẩu</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Nhập mật khẩu"
+                required
+              />
+            </div>
+            <div class="remember-me">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+          </form>
+          <p>Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+          <p><a href="#">Quên mật khẩu?</a></p>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <!--===================================== Import Script ========================================-->
+    <!--Script trung gian de add layout-->
+    <script src="../JavaScripts/Common/AddLayout.js"></script>
+
+    <!--Load header-->
+    <script src="../JavaScripts/Common/LoadHeader.js"></script>
+
+    <!--Load footer-->
+    <script src="../JavaScripts/Common/LoadFooter.js"></script>
+
+    <!-- DATA DANH SACH SAN PHAM -->
+    <script src="../Data/ProductData/ProductData.js"></script>
+
+    <!--SCRIPT DE CUON LEN DAU TRANG-->
+    <script src="../JavaScripts/Common/ToTop.js"></script>
+    <script src="../JavaScripts/Login-Sigin/Login.js"></script>
+  </body>
+</html>

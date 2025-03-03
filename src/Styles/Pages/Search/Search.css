@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -19,18 +26,27 @@ body {
 
 /* ======================== LAYOUT ======================== */
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 90%;
   margin: auto;
   padding: 20px;
 }
 .container-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /*========================CONTAINER TOP ==========================*/
 .container-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 15px 0px;
 }
@@ -39,9 +55,12 @@ body {
   font-weight: 500;
   color: inherit;
   text-decoration: none;
+  -ms-flex-line-pack: center;
   align-content: center;
   text-transform: capitalize;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 .home-navigation:hover {
@@ -50,8 +69,11 @@ body {
 .slash-line {
   font-size: 1.2rem;
   font-weight: 400;
+  -ms-flex-line-pack: center;
   align-content: center;
   padding: 0 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #searchResultText {
@@ -59,8 +81,13 @@ body {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
+  -ms-flex-line-pack: center;
   align-content: center;
   text-transform: capitalize;
+
+  -webkit-transition: all 0.5s ease-in-out;
+
+  -o-transition: all 0.5s ease-in-out;
 
   transition: all 0.5s ease-in-out;
 }
@@ -91,6 +118,8 @@ body {
   padding: 20px 15px;
   cursor: pointer;
   border-bottom: 1px solid #ddd;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-weight: 500;
   font-size: 1rem;
@@ -119,6 +148,8 @@ body {
   background: #ddd;
   border-radius: 5px;
   outline: none;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
   transition: background 0.3s;
   cursor: pointer;
 }
@@ -138,6 +169,7 @@ body {
   background: var(--main-color);
   border-radius: 50%;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -163,6 +195,8 @@ body {
   border: none;
   font-size: 16px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 5px;
 }
@@ -173,7 +207,11 @@ body {
 /*=============================== RIGHT ==================================*/
 /*================= PRODUCT SECTION TOP=================*/
 .product-section-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 18px;
 }
@@ -204,7 +242,9 @@ body {
 }
 
 .product-container {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   padding: 20px;
@@ -237,8 +277,12 @@ body {
 /*================================================== IPAD ================================================= */
 @media (min-width: 768px) and (max-width: 1024px) {
   .container-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 15px 0px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -247,8 +291,13 @@ body {
     font-weight: 400;
     color: inherit;
     text-decoration: none;
+    -ms-flex-line-pack: center;
     align-content: center;
     text-transform: capitalize;
+
+    -webkit-transition: all 0.5s ease-in-out;
+
+    -o-transition: all 0.5s ease-in-out;
 
     transition: all 0.5s ease-in-out;
   }
@@ -329,7 +378,9 @@ body {
   }
 
   .product-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 20px;
@@ -338,15 +389,24 @@ body {
 /* ==================================== MOBILE =====================================*/
 @media (max-width: 767px) {
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     margin: auto;
     padding: 15px;
   }
   .container-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10px 0px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .home-navigation {
@@ -361,8 +421,13 @@ body {
     font-weight: 400;
     color: inherit;
     text-decoration: none;
+    -ms-flex-line-pack: center;
     align-content: center;
     text-transform: capitalize;
+
+    -webkit-transition: all 0.5s ease-in-out;
+
+    -o-transition: all 0.5s ease-in-out;
 
     transition: all 0.5s ease-in-out;
   }
@@ -443,7 +508,9 @@ body {
   }
 
   .product-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 20px;
@@ -451,7 +518,11 @@ body {
   /*=============================== RIGHT ==================================*/
   /*================= PRODUCT SECTION TOP=================*/
   .product-section-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0px;
     margin-bottom: 20px;
@@ -483,7 +554,9 @@ body {
   }
 
   .product-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0px;
@@ -502,6 +575,8 @@ body {
     padding: 15px 10px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     font-weight: 500;
     font-size: 0.8rem;
@@ -525,6 +600,8 @@ body {
     background: #ddd;
     border-radius: 5px;
     outline: none;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
     cursor: pointer;
   }
@@ -544,6 +621,7 @@ body {
     background: var(--main-color);
     border-radius: 50%;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
 
@@ -569,6 +647,8 @@ body {
     border: none;
     font-size: 16px;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     border-radius: 5px;
   }
