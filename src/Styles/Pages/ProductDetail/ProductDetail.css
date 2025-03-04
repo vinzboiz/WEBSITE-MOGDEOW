@@ -1,0 +1,697 @@
+/* ✅ Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #ff6464;
+  --title-color: #fcae53;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/*=================NUT TO TOP=========================*/
+.to-top-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none; /* Ẩn ban đầu */
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  z-index: 10000;
+}
+
+.to-top-icon:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+/* ========================= Container chính===================================== */
+.container {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px 80px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* ==============================CONTAINER TRAI VOI SLIDE================================= */
+.container-left {
+  position: relative;
+}
+
+/* ✅ Ảnh sản phẩm chính */
+/* ✅ Ảnh sản phẩm chính */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 600px; /* Chiều cao cố định */
+  overflow: hidden; /* Tránh ảnh bị tràn */
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Màu nền để tránh khoảng trắng */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cắt ảnh để lấp đầy khung */
+}
+
+/* ✅ Điều hướng ảnh */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 0%;
+  height: 500px;
+
+  padding: 10px 20px;
+  opacity: 1;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
+/* ✅ Danh sách ảnh thumbnail */
+#thumbnailContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.thumbnail-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cắt ảnh để vừa khung */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.thumbnail-item img:hover {
+  transform: scale(1.1);
+}
+.demo {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* ========================================================== CONTAINER RIGHT THONG TIN SAN PHAM =========================================================*/
+.container-right {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+/* ✅ Tiêu đề sản phẩm */
+#name-product {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222222cc;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+}
+hr {
+  height: 3px;
+  background-color: gray;
+  width: 7%;
+  opacity: 0.2;
+}
+/* ✅ Đánh giá */
+.rating-star {
+  font-size: 2rem;
+  color: #ffa41b;
+  margin-right: 5px;
+}
+
+/* ✅ Giá sản phẩm */
+#price-product {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e63946;
+
+  letter-spacing: 2px;
+}
+
+/* ✅ Mô tả sản phẩm */
+#desc-product {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+.id-container {
+  display: flex;
+  gap: 10px;
+}
+.id-container h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1b1b1bba;
+  letter-spacing: 1.2px;
+}
+#id-product {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+.category-container {
+  display: flex;
+  gap: 10px;
+}
+.category-container h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1b1b1bba;
+  letter-spacing: 1.2px;
+}
+#category-product {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+}
+/* ✅ Container chứa nút */
+.contact-container {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+.contact-btn {
+  flex: 1;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ✅ Nút ZALO */
+.zalo-btn {
+  background-color: #1990ff;
+}
+
+.zalo-btn:hover {
+  background-color: #0c77e2;
+  transform: scale(1.05);
+}
+
+/* ✅ Nút Facebook */
+.fb-btn {
+  background-color: #1877f2;
+}
+
+.fb-btn:hover {
+  background-color: #145dbf;
+  transform: scale(1.05);
+}
+
+/* ============================== Nút tăng giảm=============================== */
+.quantity-container {
+  display: flex;
+  height: 30px;
+  gap: 10px;
+}
+.quantity-container h3 {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1b1b1bba;
+  text-align: center;
+  height: 100%; /* Đảm bảo thẻ h3 có chiều cao đầy đủ */
+  letter-spacing: 1.2px;
+}
+
+/* Ẩn mũi tên tăng giảm trên Chrome, Safari, Edge */
+.quantity-container input::-webkit-outer-spin-button,
+.quantity-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Ẩn mũi tên trên Firefox */
+.quantity-container input {
+  -moz-appearance: textfield;
+}
+
+.quantity-container button {
+  width: 30px;
+  height: 100%;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quantity-container .btn-decrease {
+  border-radius: 15px 0px 0px 15px;
+}
+.quantity-container button:hover {
+  background-color: #e63946;
+}
+
+/* ✅ Ô nhập số */
+.quantity-container input {
+  width: 40px;
+  height: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+
+/* ✅ Nút mua hàng */
+button.add-to-cart {
+  display: block;
+  width: 100%;
+  bottom: 0;
+
+  background: #29ce6b;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+
+button.add-to-cart:hover {
+  background: #209750;
+  transform: scale(1.02);
+}
+/* ✅ Nút mua hàng */
+button.buy-now {
+  display: block;
+  width: 100%;
+  bottom: 0;
+  background: var(--main-color);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+
+button.buy-now:hover {
+  background: #e63946;
+
+  transform: scale(1.02);
+}
+/* =============================================== Bình luận ===================================================*/
+/* Phần chứa bình luận */
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Tiêu đề bình luận */
+.comment-container h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Danh sách bình luận */
+#comment-list {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #007bff;
+}
+
+/* Tên người dùng */
+#name-cmt {
+  font-weight: bold;
+  color: #222;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Đánh giá sao */
+#star-cmt {
+  color: #f39c12;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+#date-cmt {
+  color: #5555;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+/* Nội dung bình luận */
+#desc-cmt {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.5;
+}
+/*===============phan them binh luan cua nguioi dung======================*/
+
+.comment-by-user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.comment-by-user-container h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+#comment-input {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  transition: all 0.3s;
+}
+
+#comment-input:focus {
+  border-color: rgb(255, 100, 100);
+  box-shadow: 0 0 5px rgb(255, 100, 100, 0.3);
+  outline: none;
+}
+
+/* Nút gửi bình luận */
+.comment-by-user-container button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.comment-by-user-container button:hover {
+  background-color: #c85454;
+}
+
+.comment-by-user-container-top {
+  display: flex;
+  justify-content: space-between;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 5px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  color: gray;
+  transition: color 0.2s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+
+/*================================================== DESKTOP ====================================================*/
+@media (min-width: 1025px) {
+}
+/*================================================== IPAD ================================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    background: white;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+}
+/* ==================================== MOBILE =====================================*/
+@media (max-width: 767px) {
+  /* ========================= Container chính===================================== */
+  .container {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 10px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  /* ==============================CONTAINER TRAI VOI SLIDE================================= */
+  .container-left {
+    position: relative;
+  }
+
+  /* ✅ Ảnh sản phẩm chính */
+
+  .mySlides {
+    height: 400px; /* Chiều cao cố định */
+  }
+
+  /* ✅ Danh sách ảnh thumbnail */
+  #thumbnailContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* ========================================================== CONTAINER RIGHT THONG TIN SAN PHAM =========================================================*/
+  .container-right {
+    padding: 5px;
+    min-height: 600px;
+  }
+
+  /* ✅ Tiêu đề sản phẩm */
+  #name-product {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222222cc;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+  }
+  hr {
+    height: 2px;
+    background-color: gray;
+    width: 10%;
+    opacity: 0.2;
+  }
+  /* ✅ Đánh giá */
+  .rating-star {
+    font-size: 1rem;
+    color: #ffa41b;
+    margin-right: 5px;
+  }
+
+  /* ✅ Giá sản phẩm */
+  #price-product {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #e63946;
+
+    letter-spacing: 2px;
+  }
+
+  /* ✅ Mô tả sản phẩm */
+  #desc-product {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .id-container h3 {
+    font-size: 0.9rem;
+  }
+  #id-product {
+    font-size: 0.9rem;
+  }
+
+  .category-container h3 {
+    font-size: 0.9rem;
+  }
+  #category-product {
+    font-size: 0.9rem;
+  }
+  /* ✅ Container chứa nút */
+  .contact-container {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+  }
+
+  .contact-btn {
+    padding: 10px 7px;
+    font-size: 0.8rem;
+  }
+
+  /* ============================== Nút tăng giảm=============================== */
+  .quantity-container {
+    display: flex;
+    height: 20px;
+    gap: 10px;
+  }
+  .quantity-container h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .quantity-container button {
+    font-size: 0.8rem;
+  }
+
+  /* ✅ Ô nhập số */
+  .quantity-container input {
+    font-size: 0.9rem;
+  }
+
+  /* ✅ Nút mua hàng */
+  button.add-to-cart {
+    padding: 7px;
+
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  /* ✅ Nút mua hàng */
+  button.buy-now {
+    padding: 7px;
+
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  /* =============================================== Bình luận ===================================================*/
+  /* Phần chứa bình luận */
+  .comment-container {
+    background-color: #f9f9f9;
+    padding: 0px 10px;
+  }
+
+  /* Tiêu đề bình luận */
+  .comment-container h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Danh sách bình luận */
+  #comment-list {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  /* Tên người dùng */
+  #name-cmt {
+    font-size: 1rem;
+  }
+
+  /* Đánh giá sao */
+  #star-cmt {
+    font-size: 0.9rem;
+  }
+  #date-cmt {
+    font-size: 0.8rem;
+  }
+  /* Nội dung bình luận */
+  #desc-cmt {
+    font-size: 0.9rem;
+  }
+  /*===============phan them binh luan cua nguioi dung======================*/
+
+  .comment-by-user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px;
+  }
+  .comment-by-user-container h5 {
+    font-size: 0.9rem;
+  }
+  #comment-input {
+    padding: 10px;
+
+    font-size: 0.8rem;
+  }
+
+  /* Nút gửi bình luận */
+  .comment-by-user-container button {
+    font-size: 1rem;
+  }
+
+  .rating {
+    font-size: 1.5rem;
+  }
+}

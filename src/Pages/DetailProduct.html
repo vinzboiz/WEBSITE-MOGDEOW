@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
+    />
+
+    <link rel="stylesheet" href="../Styles/Reset.css" />
+
+    <link
+      rel="stylesheet"
+      href="../Styles/Pages/ProductDetail/ProductDetail.css"
+    />
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+  </head>
+
+  <body>
+    <!--Button to toptop-->
+    <img
+      id="backToTopBtn"
+      src="../Assets/Icon/Common/to-top-icon.png"
+      alt="Lên đầu trang"
+      class="to-top-icon"
+    />
+
+    <div id="header"></div>
+    <div class="container">
+      <!--=============CONTAINER SLIDE BÊN TRÁI=======================-->
+      <div class="container-left">
+        <!-- Đây là nơi sẽ được JavaScript cập nhật danh sách ảnh -->
+        <div id="slidesContainer"></div>
+
+        <!-- Next and previous buttons -->
+        <div class="prev" onclick="plusSlides(-1)"></div>
+        <div class="next" onclick="plusSlides(1)"></div>
+
+        <!-- Thumbnail images -->
+        <div class="row" id="thumbnailContainer"></div>
+      </div>
+
+      <!--============= THÔNG TIN SẢN PHẨM =======================-->
+      <div class="container-right">
+        <h2 id="name-product"></h2>
+        <hr />
+        <div class="rating-star">⭐⭐⭐⭐⭐</div>
+        <div id="price-product"></div>
+
+        <p id="desc-product"></p>
+        <hr />
+        <div class="id-container">
+          <h3>Mã Sản Phấm:</h3>
+          <p id="id-product"></p>
+        </div>
+        <div class="category-container">
+          <h3>Danh Mục Sản Phẩm:</h3>
+          <p id="category-product"></p>
+        </div>
+        <div class="contact-container">
+          <a href="#" class="contact-btn zalo-btn">ZALO</a>
+          <a href="#" class="contact-btn fb-btn">CHAT FACEBOOK</a>
+        </div>
+
+        <!-- Nhập số lượng -->
+
+        <div class="quantity-container">
+          <h3>Số Lượng:</h3>
+          <button type="button" class="btn-decrease">-</button>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            value="1"
+            min="1"
+          />
+          <button type="button" class="btn-increase">+</button>
+        </div>
+
+        <button class="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
+        <button class="buy-now">MUA NGAY</button>
+      </div>
+    </div>
+    <!-- ==========================================Khu vực bình luận=============================================== -->
+
+    <div class="comment-container">
+      <h2>Bình luận khách hàng</h2>
+      <div class="quantity-comment"></div>
+      <div id="comment-list">
+        <div id="name-cmt">user 1</div>
+        <div id="star-cmt">⭐⭐⭐⭐⭐</div>
+        <div id="date-cmt">25-5-2004</div>
+        <div id="desc-cmt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur
+          nam sequi dolor ipsa eveniet ullam repudiandae sapiente iusto
+          obcaecati consectetur doloremque quae odit, pariatur voluptas esse
+          quidem soluta nulla!
+        </div>
+      </div>
+      <div id="comment-list">
+        <div id="name-cmt">user 1</div>
+        <div id="star-cmt">⭐⭐⭐⭐⭐</div>
+        <div id="date-cmt">25-5-2004</div>
+        <div id="desc-cmt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur
+          nam sequi dolor ipsa eveniet ullam repudiandae sapiente iusto
+          obcaecati consectetur doloremque quae odit, pariatur voluptas esse
+          quidem soluta nulla!
+        </div>
+      </div>
+      <div id="comment-list">
+        <div id="name-cmt">user 1</div>
+        <div id="star-cmt">⭐⭐⭐⭐⭐</div>
+        <div id="date-cmt">25-5-2004</div>
+        <div id="desc-cmt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur
+          nam sequi dolor ipsa eveniet ullam repudiandae sapiente iusto
+          obcaecati consectetur doloremque quae odit, pariatur voluptas esse
+          quidem soluta nulla!
+        </div>
+      </div>
+
+      <div class="comment-by-user-container">
+        <div class="comment-by-user-container-top">
+          <h2>Thêm Đánh Giá</h2>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 sao">★</label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 sao">★</label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 sao">★</label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 sao">★</label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 sao">★</label>
+          </div>
+        </div>
+        <h5>Nhận Xét Của Bạn</h5>
+        <textarea
+          id="comment-input"
+          placeholder="Viết bình luận của bạn..."
+        ></textarea>
+        <button id="submit-comment">Gửi bình luận</button>
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <!--=================== IMPORT SCRIPTS ===================-->
+    <script src="../JavaScripts/Common/AddLayout.js"></script>
+    <script src="../JavaScripts/Common/LoadHeader.js"></script>
+    <script src="../JavaScripts/Common/LoadFooter.js"></script>
+    <script src="../Data/ProductData/ProductData.js"></script>
+    <script src="../Data/ProductData/ListImgData.js"></script>
+    <script src="../JavaScripts/Common/ToTop.js"></script>
+    <script src="../JavaScripts/ProductDetail/ProductDetail.js"></script>
+    <script>
+      document
+        .getElementById("submit-comment")
+        .addEventListener("click", function () {
+          const selectedRating = document.querySelector(
+            'input[name="rating"]:checked'
+          );
+          const commentText = document.getElementById("comment-input").value;
+
+          if (!selectedRating) {
+            alert("Vui lòng chọn số sao đánh giá!");
+            return;
+          }
+
+          if (commentText.trim() === "") {
+            alert("Vui lòng nhập bình luận!");
+            return;
+          }
+
+          const ratingValue = selectedRating.value;
+          console.log("Đánh giá sao:", ratingValue);
+          console.log("Bình luận:", commentText);
+
+          // Gửi dữ liệu lên server hoặc xử lý theo nhu cầu
+        });
+    </script>
+  </body>
+</html>
