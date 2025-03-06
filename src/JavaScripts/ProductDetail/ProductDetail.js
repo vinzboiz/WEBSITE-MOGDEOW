@@ -131,3 +131,27 @@ document.addEventListener("DOMContentLoaded", function () {
     quantityInput.value = currentValue + 1;
   });
 });
+document
+  .getElementById("submit-comment")
+  .addEventListener("click", function () {
+    const selectedRating = document.querySelector(
+      'input[name="rating"]:checked'
+    );
+    const commentText = document.getElementById("comment-input").value;
+
+    if (!selectedRating) {
+      alert("Vui lòng chọn số sao đánh giá!");
+      return;
+    }
+
+    if (commentText.trim() === "") {
+      alert("Vui lòng nhập bình luận!");
+      return;
+    }
+
+    const ratingValue = selectedRating.value;
+    console.log("Đánh giá sao:", ratingValue);
+    console.log("Bình luận:", commentText);
+
+    // Gửi dữ liệu lên server hoặc xử lý theo nhu cầu
+  });

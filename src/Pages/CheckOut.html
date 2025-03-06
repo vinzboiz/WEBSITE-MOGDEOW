@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
+    />
+
+    <link rel="stylesheet" href="../Styles/Reset.css" />
+
+    <link rel="stylesheet" href="../Styles/Pages/Checkout/CheckOut.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+  </head>
+
+  <body>
+    <!--Button to toptop-->
+    <img
+      id="backToTopBtn"
+      src="../Assets/Icon/Common/to-top-icon.png"
+      alt="Lên đầu trang"
+      class="to-top-icon"
+    />
+
+    <div id="header"></div>
+    <div class="container">
+      <!--=========================CONTAINER TRAI=============================-->
+      <div class="container-left">
+        <div class="name-shop">MOGDEOW PETSHOP</div>
+
+        <div class="container-left-bottom">
+          <!--==============================PHAN THONG TIN NGUOI NHAN ==========================================-->
+          <div class="customer-info-container">
+            <h3>Thông tin mua hàng</h3>
+            <label>Họ và Tên:</label>
+            <input type="text" id="customer-name" placeholder="Nhập họ tên" />
+
+            <label>Email:</label>
+            <input
+              type="text"
+              id="customer-phone"
+              placeholder="Nhập số điện thoại"
+            />
+
+            <label>Số điện thoại:</label>
+            <input
+              type="text"
+              id="customer-phone"
+              placeholder="Nhập số điện thoại"
+            />
+
+            <label>Địa chỉ giao hàng:</label>
+            <input
+              type="text"
+              id="customer-address"
+              placeholder="Nhập địa chỉ"
+            />
+
+            <label>Ghi chú:</label>
+            <textarea
+              id="comment-input"
+              placeholder="Viết bình luận của bạn..."
+            ></textarea>
+          </div>
+          <!--=======================================PHUONG THUC THANH TOAN=========================================-->
+          <div class="cash-container">
+            <h3>Thanh Toán</h3>
+            <div class="cash-container-bottom">
+              <div>
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="bank"
+                  id="bank-transfer"
+                />
+                <label for="bank-transfer" class="payment-method-container">
+                  <span class="payment-method">Chuyển khoản qua ngân hàng</span>
+                  <img
+                    src="../Assets/Icon/Pages/CheckOut/bank-icon.png"
+                    alt="bank-icon"
+                  />
+                </label>
+
+                <div class="payment-info">
+                  <p>Tên tài khoản: NGUYEN XUAN VINH</p>
+                  <p>Ngân hàng: MB BANK - NGAN HANG QUAN DOI VIET NAM</p>
+                  <p>Số tài khoản: 11011101110104</p>
+                  <p>Nội dung: Số điện thoại + Tên tài khoản</p>
+                </div>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="cod"
+                  id="cod"
+                />
+                <label for="cod" class="payment-method-container">
+                  <span class="payment-method"
+                    >Thanh toán khi giao hàng (COD)</span
+                  >
+                  <img
+                    src="../Assets/Icon/Pages/CheckOut/cash-icon.png"
+                    alt="cash-icon"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--======================================THONG TIN HOA DON =================================================-->
+      <div class="container-right">
+        <h3>Đơn Hàng</h3>
+        <h1>Mã Hóa Đơn</h1>
+        <hr />
+        <div class="list-product-container"></div>
+
+        <hr />
+        <div class="container-summary">
+          <h1>Tạm Tính</h1>
+          <div id="total-summary"></div>
+        </div>
+
+        <div id="container-shipping-fee">
+          <h2>Phí Vận Chuyển</h2>
+          <div id="total-shipping-fee"></div>
+        </div>
+        <hr />
+        <div id="container-total">
+          <h2>Tổng Cộng</h2>
+          <div id="total-all"></div>
+        </div>
+        <button class="btn order">ĐẶT HÀNG</button>
+        <button class="btn back">QUAY LẠI GIỎ HÀNG</button>
+        <button class="btn cancel">HỦY ĐẶT HÀNG</button>
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <!--=================== IMPORT SCRIPTS ===================-->
+    <script src="../JavaScripts/Common/AddLayout.js"></script>
+    <script src="../JavaScripts/Common/LoadHeader.js"></script>
+    <script src="../JavaScripts/Common/LoadFooter.js"></script>
+    <script src="../Data/ProductData/ProductData.js"></script>
+    <script src="../Data/ProductData/ListImgData.js"></script>
+    <script src="../JavaScripts/Common/ToTop.js"></script>
+    <script src="../JavaScripts/ProductDetail/ProductDetail.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const bankTransfer = document.getElementById("bank-transfer");
+        const cod = document.getElementById("cod");
+        const bankInfo = document.getElementById("bank-info");
+
+        function toggleBankInfo() {
+          if (bankTransfer.checked) {
+            bankInfo.style.display = "block";
+          } else {
+            bankInfo.style.display = "none";
+          }
+        }
+
+        bankTransfer.addEventListener("change", toggleBankInfo);
+        cod.addEventListener("change", toggleBankInfo);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+/* ✅ Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #ff6464;
+  --title-color: #fcae53;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+}
+
+/*=================NÚT TO TOP=========================*/
+.to-top-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none; /* Ẩn ban đầu */
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10000;
+}
+
+.to-top-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+/*=============CONTAINER=================*/
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+/*===============CONTAINER-LEFT==================*/
+.container-left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.name-shop {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Coiny", cursive;
+  color: var(--main-color);
+  margin-top: 20px;
+}
+.container-left-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  gap: 50px;
+}
+/*================customer-info-container=========================*/
+.customer-info-container {
+  padding: 20px;
+  border-radius: 8px; /* Bo tròn góc */
+  margin: auto; /* Canh giữa */
+}
+
+.customer-info-container h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.customer-info-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.customer-info-container input {
+  width: 300px;
+  padding: 15px 7px;
+  font-size: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+.customer-info-container textarea {
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+  padding: 15px 7px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.customer-info-container input:focus,
+.customer-info-container textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.customer-info-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.customer-info-container input::placeholder,
+.customer-info-container textarea::placeholder {
+  color: #aaa;
+}
+
+.customer-info-container input[type="text"] {
+  margin-bottom: 15px;
+}
+
+/*=============================cash-container===========================*/
+.cash-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+}
+
+.cash-container h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  margin-bottom: 33px;
+}
+
+.cash-container-bottom {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 8px;
+  gap: 0px; /* Xóa khoảng cách giữa các phương thức thanh toán */
+  overflow: hidden; /* Giúp bo tròn toàn bộ nội dung bên trong */
+}
+
+/* Ẩn radio mặc định */
+input[type="radio"] {
+  display: none;
+}
+
+.payment-method-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Khi radio được chọn, thay đổi giao diện */
+input[type="radio"]:checked + .payment-method-container {
+  background: #e6f0ff;
+  color: #007bff;
+  border-left: 4px solid #007bff;
+  box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover để có hiệu ứng */
+.payment-method-container:hover {
+  border-color: #007bff;
+  background: #eef5ff;
+}
+
+/* Bỏ border-bottom ở phương thức cuối cùng */
+.payment-method-container:last-child {
+  border-bottom: none;
+}
+
+/* Khi nhấn vào phương thức thanh toán, hiển thị thông tin */
+.payment-info {
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+  background: #f8f8f8;
+  display: none;
+  max-width: 500px;
+}
+.payment-info p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #585858;
+}
+/* Hiển thị thông tin ngân hàng khi được chọn */
+input[type="radio"]:checked + .payment-method-container + .payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Định dạng hình ảnh icon thanh toán */
+.payment-method-container img {
+  height: 20px;
+}
+/* ==================== PHẦN ĐƠN HÀNG ==================== */
+.container-right {
+  background-color: #fff; /* Nền trắng */
+  padding: 20px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  border: 1px solid #ddd; /* Viền nhẹ */
+
+  right: 0; /* Nằm sát bên phải */
+  top: 0; /* Canh trên cùng */
+  height: 100vh; /* Chiều cao 100% viewport */
+  width: 400px; /* Giới hạn chiều rộng */
+
+  overflow-y: auto; /* Tạo thanh cuộn nếu có nhiều sản phẩm */
+  overflow-x: hidden;
+}
+
+/* Thiết kế thanh cuộn */
+.container-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.container-right::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.container-right::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container-right h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.container-right h1,
+.container-right h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  margin: 10px 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+.list-product-container {
+  padding: 10px 0;
+  min-height: 50px; /* Đảm bảo có khoảng trống khi chưa load sản phẩm */
+}
+
+/* Canh chỉnh giá trị đơn hàng */
+.container-summary,
+#container-shipping-fee,
+#container-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  padding: 10px 0;
+}
+
+/* Nút ĐẶT HÀNG */
+.btn {
+  width: 100%;
+
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+.btn.order {
+  background-color: #33dc00;
+}
+
+.btn.order:hover {
+  background-color: #239101;
+}
+.btn.cancel {
+  background-color: #fd4b4bef;
+}
+
+.btn.cancel:hover {
+  background-color: #a73636ef;
+}
+.btn.back {
+  background-color: #007bff;
+}
+
+.btn.back:hover {
+  background-color: #0056b3;
+}
+/* ======================== RESPONSIVE SIDEBAR ======================== */
+/*================================================== DESKTOP ====================================================*/
+@media (min-width: 1025px) {
+}
+/*================================================== IPAD ================================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*=============CONTAINER=================*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  /*===============CONTAINER-LEFT==================*/
+  .container-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+  }
+  .name-shop {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Coiny", cursive;
+    color: var(--main-color);
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .container-left-bottom {
+    display: flex;
+
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* ==================== PHẦN ĐƠN HÀNG ==================== */
+  .container-right {
+    background-color: #fff; /* Nền trắng */
+    padding: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    margin: 0 auto 20px;
+    right: 0; /* Nằm sát bên phải */
+    top: 0; /* Canh trên cùng */
+    max-height: 700px; /* Chiều cao 100% viewport */
+    width: 89%; /* Giới hạn chiều rộng */
+
+    overflow-y: auto; /* Tạo thanh cuộn nếu có nhiều sản phẩm */
+    overflow-x: hidden;
+  }
+}
+/* ==================================== MOBILE =====================================*/
+@media (max-width: 767px) {
+  /*=============CONTAINER=================*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  /*===============CONTAINER-LEFT==================*/
+  .container-left {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .name-shop {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Coiny", cursive;
+    color: var(--main-color);
+    margin-top: 20px;
+  }
+  .container-left-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    width: 100%;
+  }
+  /*================customer-info-container=========================*/
+  .customer-info-container {
+    padding: 0px;
+    border-radius: 8px; /* Bo tròn góc */
+    margin: 0 auto; /* Canh giữa */
+  }
+
+  /*=============================cash-container===========================*/
+  .cash-container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 25px;
+  }
+
+  /* ==================== PHẦN ĐƠN HÀNG ==================== */
+  .container-right {
+    background-color: #fff; /* Nền trắng */
+    padding: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    margin: 0 auto 20px;
+    right: 0; /* Nằm sát bên phải */
+    top: 0; /* Canh trên cùng */
+    max-height: 600px; /* Chiều cao 100% viewport */
+    width: 400px; /* Giới hạn chiều rộng */
+
+    overflow-y: auto; /* Tạo thanh cuộn nếu có nhiều sản phẩm */
+    overflow-x: hidden;
+  }
+}
