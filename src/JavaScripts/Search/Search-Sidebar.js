@@ -1,3 +1,5 @@
+import { generateProductCard } from "../Common/ProductCard.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // ✅ Lấy các phần tử HTML cần thiết từ DOM
   const categoryList = document.getElementById("categoryList");
@@ -174,22 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
         clickedCategory
       )}`;
     });
-  }
-
-  // ✅ Tạo HTML sản phẩm
-  function generateProductCard(product) {
-    return `
-      <div class="product-card" >
-        <div class="image-container">
-          <img class="product-image" src="${product.src}" alt="${product.name}" />
-          <a  class="view-now" href="DetailProduct.html?id=${product.id}">Xem ngay</a>
-        </div>
-        <div class="product-details">
-          <p class="product-name">${product.name}</p>
-          <p class="product-price">${product.price}</p>
-        </div>
-      </div>
-    `;
   }
 
   // ✅ Xáo trộn danh sách sản phẩm

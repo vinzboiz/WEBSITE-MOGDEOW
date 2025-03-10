@@ -7,6 +7,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const foodProducts = [
     src: "../Assets/Img/Home/Category/food-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -100,6 +110,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 12,
@@ -109,6 +120,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 13,
@@ -118,6 +130,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 14,
@@ -127,6 +140,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 15,
@@ -136,6 +150,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 16,
@@ -146,6 +161,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 17,
@@ -155,6 +171,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 18,
@@ -164,6 +181,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 19,
@@ -173,6 +191,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 20,
@@ -182,6 +201,7 @@ const hygieneProducts = [
     src: "../Assets/Img/Home/Category/hygiene-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -194,6 +214,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 22,
@@ -203,6 +224,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 23,
@@ -212,6 +234,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 24,
@@ -221,6 +244,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 25,
@@ -230,6 +254,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 26,
@@ -239,6 +264,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 27,
@@ -248,6 +274,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 28,
@@ -257,6 +284,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 29,
@@ -266,6 +294,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 30,
@@ -275,6 +304,7 @@ const accessoriesProducts = [
     src: "../Assets/Img/Home/Category/toy-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -287,6 +317,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 32,
@@ -296,6 +327,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 33,
@@ -305,6 +337,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 34,
@@ -314,6 +347,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 35,
@@ -323,6 +357,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 36,
@@ -332,6 +367,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 37,
@@ -341,6 +377,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 38,
@@ -350,6 +387,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 39,
@@ -359,6 +397,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 40,
@@ -368,6 +407,7 @@ const housingProducts = [
     src: "../Assets/Img/Home/Category/cage-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -380,6 +420,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 42,
@@ -389,6 +430,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 43,
@@ -398,6 +440,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 44,
@@ -407,6 +450,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 45,
@@ -416,6 +460,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 46,
@@ -425,6 +470,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 47,
@@ -434,6 +480,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 48,
@@ -443,6 +490,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 49,
@@ -452,6 +500,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 50,
@@ -461,6 +510,7 @@ const medicineProducts = [
     src: "../Assets/Img/Home/Category/medicine-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -476,6 +526,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 52,
@@ -485,6 +536,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 
   {
@@ -495,6 +547,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 54,
@@ -504,6 +557,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 55,
@@ -513,6 +567,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 56,
@@ -522,6 +577,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 57,
@@ -531,6 +587,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 58,
@@ -540,6 +597,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 59,
@@ -549,6 +607,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 60,
@@ -558,6 +617,7 @@ const dogProducts = [
     src: "../Assets/Img/Home/Category/dog-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
@@ -571,6 +631,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 62,
@@ -580,6 +641,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 63,
@@ -589,6 +651,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 64,
@@ -598,6 +661,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 65,
@@ -607,6 +671,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 66,
@@ -616,6 +681,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 67,
@@ -625,6 +691,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 68,
@@ -634,6 +701,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
   {
     id: 69,
@@ -643,6 +711,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 
   {
@@ -653,6 +722,7 @@ const catProducts = [
     src: "../Assets/Img/Home/Category/cat-category.png",
     href: "#",
     desc: "Mochi là một bé mèo Ba Tư đáng yêu với bộ lông mềm mượt như bông. Bé rất ngoan, thân thiện và thích được vuốt ve. Nếu bạn đang tìm một người bạn đồng hành đáng yêu, Mochi chắc chắn sẽ mang đến cho bạn những khoảnh khắc vui vẻ và ấm áp!",
+    quantities: 5,
   },
 ];
 
