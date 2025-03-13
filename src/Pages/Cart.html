@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
+    />
+
+    <link rel="stylesheet" href="../Styles/Reset.css" />
+
+    <link rel="stylesheet" href="../Styles/Pages/Cart/Cart.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Header.css" />
+    <link rel="stylesheet" href="../Styles/Layout/Footer.css" />
+  </head>
+
+  <body>
+    <!--Button to toptop-->
+    <img
+      id="backToTopBtn"
+      src="../Assets/Icon/Common/to-top-icon.png"
+      alt="Lên đầu trang"
+      class="to-top-icon"
+    />
+
+    <div id="header"></div>
+    <div class="container">
+      <div class="title-cart">GIỎ HÀNG CỦA BẠN</div>
+      <!--================noi dung gio hang ============================-->
+
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>Sản Phẩm</th>
+            <th>Đơn Giá</th>
+            <th>Số Lượng</th>
+            <th>Số Tiền</th>
+            <th>Thao Tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--San pham 1-->
+          <tr class="product-row">
+            <td><input type="checkbox" /></td>
+            <td class="product-info">
+              <img
+                src="../Assets/Img/Home/Category/cat-category.png"
+                alt="Product"
+              />
+              <div class="product-details">
+                <p class="product-name">
+                  Mèo goku vegeta piccolo gohan krillin Mèo goku vegeta piccolo
+                  gohan krillin Mèo goku vegeta piccolo gohan krillin
+                </p>
+                <p class="product-type">Danh Mục: Mèo</p>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="price">100.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td>
+              <div class="quantity">
+                <button>-</button>
+                <input type="text" value="3" />
+                <button>+</button>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="total-price">300.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td class="actions">
+              <button class="btn-delete">Xóa</button>
+            </td>
+          </tr>
+          <!--San pham 2-->
+          <tr class="product-row">
+            <td><input type="checkbox" /></td>
+            <td class="product-info">
+              <img
+                src="../Assets/Img/Home/Category/cat-category.png"
+                alt="Product"
+              />
+              <div class="product-details">
+                <p class="product-name">
+                  Mèo goku vegeta piccolo gohan krillin Mèo goku vegeta piccolo
+                  gohan krillin Mèo goku vegeta piccolo gohan krillin
+                </p>
+                <p class="product-type">Danh Mục: Mèo</p>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="price">100.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td>
+              <div class="quantity">
+                <button>-</button>
+                <input type="text" value="3" />
+                <button>+</button>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="total-price">300.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td class="actions">
+              <button class="btn-delete">Xóa</button>
+            </td>
+          </tr>
+          <!--San pham 3-->
+          <tr class="product-row">
+            <td><input type="checkbox" /></td>
+            <td class="product-info">
+              <img
+                src="../Assets/Img/Home/Category/cat-category.png"
+                alt="Product"
+              />
+              <div class="product-details">
+                <p class="product-name">
+                  Mèo goku vegeta piccolo gohan krillin Mèo goku vegeta piccolo
+                  gohan krillin Mèo goku vegeta piccolo gohan krillin
+                </p>
+                <p class="product-type">Danh Mục: Mèo</p>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="price">100.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td>
+              <div class="quantity">
+                <button>-</button>
+                <input type="text" value="3" />
+                <button>+</button>
+              </div>
+            </td>
+            <td>
+              <div class="price-wrapper">
+                <span class="total-price">300.000...</span>
+                <strong>VND</strong>
+              </div>
+            </td>
+            <td class="actions">
+              <button class="btn-delete">Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <p class="total-amount">
+          Tổng số tiền thanh toán:
+          <span id="total-payment">900.000 VND</span>
+        </p>
+        <div class="button-group">
+          <button class="btn back">Quay Lại</button>
+          <button class="btn checkout">Thanh Toán</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!--=================== IMPORT SCRIPTS ===================-->
+    <script src="../JavaScripts/Common/AddLayout.js"></script>
+    <script src="../JavaScripts/Common/LoadHeader.js"></script>
+    <script src="../JavaScripts/Common/LoadFooter.js"></script>
+    <script src="../Data/ProductData/ProductData.js"></script>
+    <script src="../Data/ProductData/ListImgData.js"></script>
+    <script src="../JavaScripts/Common/ToTop.js"></script>
+    <script src="../JavaScripts/Cart/Cart.js"></script>
+  </body>
+</html>
